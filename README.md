@@ -42,6 +42,7 @@ npm install
 $ npm run start:dev
 ```
 
-## IMPORTANTE
+# IMPORTANTE
 
-# Para que el servidor este en funcionamiento, asegurar de tener el puerto 3000 libre de uso
+## Para que el servidor este en funcionamiento, asegurar de tener el puerto 3000 libre de uso.
+## Es preferible contar con la ultima version de Node (Nodejs 22)
