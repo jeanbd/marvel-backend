@@ -22,52 +22,26 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Manual de instalacion
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## Ejecutar en consola donde se va a descargar
 
 ```bash
-$ npm install
+git clone https://github.com/jeanbd/marvel-backend.git
 ```
 
-## Running the app
+## Ejecutar en la consosla dentro de la aplicación
 
 ```bash
-# development
-$ npm run start
+# Instalar dependencias
+npm install
 
-# watch mode
+# Ejecutar la aplicación
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
-## Test
+## IMPORTANTE
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+# Para que el servidor este en funcionamiento, asegurar de tener el puerto 3000 libre de uso
