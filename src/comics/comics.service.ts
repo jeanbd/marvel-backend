@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, ConflictException, InternalServerErrorException } from '@nestjs/common';
 import { CreateComicDto } from './dto/create-comic.dto';
 // import { UpdateComicDto } from './dto/update-comic.dto';
 import { HttpService } from '@nestjs/axios';
@@ -63,8 +63,13 @@ export class ComicsService {
       const favoriteComic = await this.comicFavoriteModel.create(createFavoriteDto);
       return favoriteComic;
     } catch (error) {
+      if (error.code === 11000) {
+        // Error de índice único (duplicado)
+        throw new ConflictException('This comic already had been added');
+      }
       console.log('Error server',error);
-      throw new Error (`Error server: ${error}`)
+      // throw new Error (`Error server: ${error}`)
+      throw new InternalServerErrorException('Server Error, Try later');
     }
   }
 
@@ -74,7 +79,7 @@ export class ComicsService {
       const favoritesComics = await this.comicFavoriteModel.find({userId:id});
 
       for (const item of favoritesComics) {
-        const _id:number = +item.comicid;
+        const _id:number = +item.comicId;
         const currentComid = await this.findOne(_id);
         finalResult.push(currentComid);
       }

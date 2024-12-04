@@ -1,4 +1,4 @@
 export class CreateFavoriteDto {
-    comicid:number;
+    comicId:number;
     userId:string;
 }
